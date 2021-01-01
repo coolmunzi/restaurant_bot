@@ -8,9 +8,9 @@ hence a user can find restaurants via Whatsapp.
 
 <table>
   <tr>
-    <td><img src="images/whatsapp_demo_1.png" width=270 height=480></td>
-    <td><img src="images/whatsapp_demo_2.png" width=270 height=480></td>
-    <td><img src="images/whatsapp_demo_3.png" width=270 height=480></td>
+    <td><img src="images/demo_1.png" width=270 height=480></td>
+    <td><img src="images/demo_2.png" width=270 height=480></td>
+    <td><img src="images/demo_3.png" width=270 height=480></td>
   </tr>
  </table>
 
