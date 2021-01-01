@@ -31,18 +31,15 @@ hence a user can find restaurants via Whatsapp.
 3. Create account in Twilio and start the [whatsapp sandbox](https://www.twilio.com/console/sms/whatsapp/learn).
 
 4. Install [ngrok](https://ngrok.com/download) in the local machine and add your authorization token. 
-
-<h2> Model Training </h2>
-
-The repo contains ssd efficientdet model trained with 20,000 iterations using Google Colab. You can also refer to [my colab notebook](https://colab.research.google.com/drive/1tGTuIg2xJipoln8IC8cxH35Wr4nJ7930?usp=sharing), where I have tried to explain step by step flow for performing model training using Tensorflow2 object detection API. 
+ 
 
 <h2> Installation & Usage</h2>
 
 1. Clone the repo using following command 
     
-        $ git clone https://github.com/coolmunzi/face_mask_detector.git
+        $ git clone https://github.com/coolmunzi/restaurant_bot.git
 2. Create a virtual environment and change the directory to the cloned repo
-3. Change your directory to the cloned repo and create a Python virtual environment named 'test'
+3. Change your directory to the cloned repo and create a Python virtual environment
    
 4. Add twilio credentials in credentials.yml file:
          
