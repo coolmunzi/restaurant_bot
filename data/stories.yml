@@ -1,0 +1,97 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: user has not provided location and cuisine
+  steps:
+  - intent: search_restaurant
+  - action: utter_welcome
+  - action: utter_ask_user_location
+  - intent: get_location
+    entities:
+      - user_location: 'Bangalore'
+  - slot_was_set:
+      - user_location: 'Bangalore'
+  - action: utter_ask_cuisine
+  - intent: get_cuisine
+    entities:
+      - cuisine: 'South Indian'
+  - slot_was_set:
+      - cuisine: 'South Indian'
+  - action: utter_search_restaurants
+  - action: action_find_restaurants
+
+- story: user has provided location but not cuisine
+  steps:
+  - intent: search_restaurant
+    entities:
+      - user_location: 'Mumbai'
+      - slot_was_set:
+          - user_location: 'Mumbai'
+  - action: utter_welcome
+  - action: utter_ask_cuisine
+  - intent: get_cuisine
+    entities:
+      - cuisine: 'South Indian'
+  - slot_was_set:
+      - cuisine: 'South Indian'
+  - action: utter_search_restaurants
+  - action: action_find_restaurants
+
+
+- story: user has provided cuisine but not location
+  steps:
+  - intent: search_restaurant
+    entities:
+      - cuisine: 'South Indian'
+  - slot_was_set:
+      - cuisine: 'South Indian'
+  - action: utter_welcome
+  - action: utter_ask_user_location
+  - intent: get_location
+    entities:
+      - user_location: 'Mumbai'
+  - slot_was_set:
+      - user_location: 'Mumbai'
+  - action: utter_search_restaurants
+  - action: action_find_restaurants
+
+- story: user has provided both location & cuisine
+  steps:
+  - intent: search_restaurant
+    entities:
+      - cuisine: 'South Indian'
+      - user_location: 'Mumbai'
+  - slot_was_set:
+      - cuisine: 'South Indian'
+      - user_location: 'Mumbai'
+  - action: utter_welcome
+  - action: utter_search_restaurants
+  - action: action_find_restaurants

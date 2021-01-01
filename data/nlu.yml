@@ -1,0 +1,426 @@
+version: "2.0"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+#Restaurant examples
+- intent: search_restaurant
+  examples: |
+    - search restaurants
+    - find me restaurants
+    - I am looking for restaurants
+    - I am looking for restaurants in [navi mumbai]{"entity" : "user_location"}
+    - I am looking for restaurants near [navi mumbai]{"entity" : "user_location"}
+    - I am hungry, please find some restaurants
+    - I am hungry, please find some restaurants near [nehru chowk]{"entity" : "user_location"}
+    - get me some restaurants
+    - find me some restaurants
+    - i need to know about restaurants
+    - need food
+    - searching for restaurants
+    - looking for some restaurants
+    - I want to eat something please tell me some location in [Koramangala]{"entity" : "user_location"}
+    - I want to eat something please tell me some location [Navi Mumbai]{"entity" : "user_location"}
+    - i am looking to eat [Raw Meats]{"entity" : "cuisine"}
+    - i am looking to eat [pizza]{"entity" : "cuisine"}
+    - i am looking to eat [dosa]{"entity" : "cuisine"}
+    - i am looking to eat [rotis]{"entity" : "cuisine"}
+    - i am looking to eat [North Indian]{"entity" : "cuisine"}
+    - i am looking to eat [South Indian]{"entity" : "cuisine"}
+    - i am looking to eat [Biryani]{"entity" : "cuisine"}
+    - i am looking to eat [pav bhaaji]{"entity" : "cuisine"}
+    - i am looking to eat [Gujarati]{"entity" : "cuisine"} dish
+    - i am looking to eat [malayali]{"entity" : "cuisine"} dish
+    - i am looking to eat [tamil]{"entity" : "cuisine"} dish
+    - i am looking to eat [Modern Indian]{"entity" : "cuisine"} dish
+    - i am looking to eat [North Eastern]{"entity" : "cuisine"} dish
+    - i am looking to eat [Mangalorean]{"entity" : "cuisine"} dish
+    - i would love to eat [Kebab]{"entity" : "cuisine"}
+    - i would love to eat [Middle Eastern]{"entity" : "cuisine"}
+    - i would love to eat [Italian]{"entity" : "cuisine"}
+    - i would love to eat [Maharashtrian]{"entity" : "cuisine"}
+    - i would like to eat [italian]{"entity" : "cuisine"}
+    - i am looking to eat some [south indian]{"entity" : "cuisine"} food
+    - I am looking for restaurants that serves [Street Food]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [Healthy Food]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [misal pav]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [misal pav]{"entity" : "cuisine"} & [vada pav]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [Street Food]{"entity" : "cuisine"}  & [Healthy Food]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [vada pav]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [Drinks]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [Drinks]{"entity" : "cuisine"} & [Ice Cream]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [Ice Cream]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [Wraps]{"entity" : "cuisine"}
+    - I am looking for restaurants that serves [maharashtrian]{"entity" : "cuisine"} food
+    - I am looking for restaurants that serves [maharashtrian]{"entity" : "cuisine"} food in [chennai]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [Seafood]{"entity" : "cuisine"} food in [mumbai]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [BBQ]{"entity" : "cuisine"} food in [pune]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [BBQ]{"entity" : "cuisine"} food in [wakad]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [maharashtrian]{"entity" : "cuisine"} food in [delhi]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [south indian]{"entity" : "cuisine"} food in [new delhi]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [Japanese]{"entity" : "cuisine"} food
+    - I am looking for restaurants that serves [south indian]{"entity" : "cuisine"} food
+    - I am looking for restaurants that serves [North Eastern]{"entity" : "cuisine"} food near [new delhi]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [Indian]{"entity" : "cuisine"} food near [hyderabad]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [Swedish]{"entity" : "cuisine"} food near [navi mumbai]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [German]{"entity" : "cuisine"} food near [santacruz]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [North Eastern]{"entity" : "cuisine"} food near [thane]{"entity" : "user_location"}
+    - I am looking for restaurants that serves [tamil]{"entity" : "cuisine"} food
+    - I am looking for restaurants that serves [chinese]{"entity" : "cuisine"} food
+    - I am looking for restaurants that serves [Malaysian]{"entity" : "cuisine"} food
+    - I am looking for restaurants that serves [Momos]{"entity" : "cuisine"}
+    - I am searching for some [bengali]{"entity" : "cuisine"} food
+    - I am searching for some [Brazilian]{"entity" : "cuisine"} food
+    - I am searching for some [Coffee and Tea]{"entity" : "cuisine"}
+    - I am searching for some [Modern Indian]{"entity" : "cuisine"} food
+    - I am searching for some [Mongolian]{"entity" : "cuisine"} food
+    - I am searching for some [Chettinad]{"entity" : "cuisine"} food
+    - I am searching for some [Hyderabadi]{"entity" : "cuisine"} food near [thane]{"entity" : "user_location"}
+    - I am searching for some [Asian]{"entity" : "cuisine"} food near [thrissur]{"entity" : "user_location"}
+    - I am searching for some [Asian]{"entity" : "cuisine"} food near [berlin]{"entity" : "user_location"}
+    - I am searching for some [Chettinad]{"entity" : "cuisine"} food near [kanpur]{"entity" : "user_location"}
+    - I am searching for some [Middle Eastern]{"entity" : "cuisine"} food near [kanjur marg]{"entity" : "user_location"}
+    - I am searching for some [Mediterranean]{"entity" : "cuisine"} food near [khar road]{"entity" : "user_location"}
+    - I am searching for some [Chettinad]{"entity" : "cuisine"} food near [mankhurd]{"entity" : "user_location"}
+    - I want to eat [bengali]{"entity" : "cuisine"} food please tell me some location [near by]{"entity" : "user_location"}
+    - I want to eat [Fast Food]{"entity" : "cuisine"} please tell me some location [near by]{"entity" : "user_location"}
+    - I want to eat [Arabian]{"entity" : "cuisine"} food please tell me some location [near by]{"entity" : "user_location"}
+    - I want to eat [Fast Food]{"entity" : "cuisine"} please tell me some location [near by]{"entity" : "user_location"}
+    - I want to eat [kerala]{"entity" : "cuisine"} food please tell me some locations near [nalla sopara]{"entity" : "user_location"}
+    - I want to eat [Asian]{"entity" : "cuisine"} food please tell me some locations near [ram mandir]{"entity" : "user_location"}
+    - show me some restaurants near [lucknow]{"entity" : "user_location"}
+    - show me some restaurants near [berlin]{"entity" : "user_location"}
+    - show me some [maharashtrian]{"entity" : "cuisine"} restaurants
+    - show me [chinese]{"entity" : "cuisine"} restaurants near [kalyan]{"entity" : "user_location"}
+    - I want to eat [kerala]{"entity" : "cuisine"} food please tell me some locations near [nalla sopara]{"entity" : "user_location"}
+    - I want to eat [Asian]{"entity" : "cuisine"} food please tell me some locations near [ram mandir]{"entity" : "user_location"}
+
+
+
+- intent: get_location
+  examples: |
+    - Near [Pune]{"entity": "user_location"}
+    - near [berlin]{"entity": "user_location"}
+    - in [Udaipur]{"entity": "user_location"}
+    - find restaurants in [Ahmedabad]{"entity": "user_location"}
+    - location is [Delhi]{"entity": "user_location"} restaurants
+    - [Pune]{"entity": "user_location"} restaurants
+    - Tell me some locations in [mumbai]{"entity": "user_location"}
+    - [Ahmedabad]{"entity" : "user_location"}
+    - [mumbai]{"entity" : "user_location"}
+    - [koramagala]{"entity" : "user_location"}
+    - near [Jankalyan colony]{"entity" : "user_location"}
+    - near [Moti bagh]{"entity" : "user_location"}
+    - near [Karol bagh]{"entity" : "user_location"}
+    - it's [Noida Sector 16]({"entity" : "user_location"}
+    - it's [Noida Sector 18]{"entity" : "user_location"}
+    - it's [Okhla]{"entity" : "user_location"}
+    - I am at [Andheri East]{"entity" : "user_location"}
+    - I am at [Ville Parle]{"entity" : "user_location"}
+    - I am at [Beach road]{"entity" : "user_location"}
+    - my area is [mumbai]{"entity" : "user_location"}
+    - my area is [kamshet]{"entity" : "user_location"}
+    - my area is [karjat]{"entity" : "user_location"}
+    - my area is [wadala]{"entity" : "user_location"}
+    - [Sardar Chowk]{"entity" : "user_location"}
+    - [MG Road]{"entity" : "user_location"}
+    - [ring road]{"entity" : "user_location"}
+    - [shivaji chowk]{"entity" : "user_location"}
+    - [shivaji park]{"entity" : "user_location"}
+    - [lower parel]{"entity" : "user_location"}
+    - [lucknow]{"entity" : "user_location"}
+    - [amritsar]{"entity" : "user_location"}
+
+- intent: get_cuisine
+  examples: |
+    - i am looking to eat [Biryani]{"entity": "cuisine"}
+    - i would love to eat [Kebab]{"entity": "cuisine"}
+    - i would like to eat [American]{"entity": "cuisine"}
+    - I am looking for restaurants that serves [Gujarati]{"entity": "cuisine"}
+    - I am searching for some [Asian]{"entity": "cuisine"}
+    - cuisine is [kerala]{"entity": "cuisine"} food
+    - Get me [European]{"entity": "cuisine"} dish
+    - i would prefer to eat [mexican]{"entity" : "cuisine"}
+    - i would love to eat [italian]{"entity" : "cuisine"}
+    - i would like to have [chinese]{"entity" : "cuisine"} food
+    - i would love to eat [mexican]{"entity" : "cuisine"} food
+    - i would like to eat [chinese]{"entity" : "cuisine"}
+    - please provide me [north indian]{"entity" : "cuisine"} food
+    - please provide me [italian]{"entity" : "cuisine"} food
+    - please give me [mexican]{"entity" : "cuisine"} food
+    - please give me [italian]{"entity" : "cuisine"} food
+    - please give me some [thai]{"entity" : "cuisine"} food
+    - i will eat [north indian]{"entity" : "cuisine"} food
+    - i would love to eat [south indian]{"entity" : "cuisine"} food
+    - i will prefer [south indian]{"entity" : "cuisine"} food
+    - i will prefer to have [north indian]{"entity" : "cuisine"}
+    - i will eat [chinese]{"entity" : "cuisine"}
+    - i would love to eat [arabian]{"entity" : "cuisine"} food
+    - my choice will be [arabian]{"entity" : "cuisine"}
+    - i would love to eat [mexican]{"entity" : "cuisine"}
+    - i would like to have [italian]{"entity" : "cuisine"}
+    - i would like to eat [italian]{"entity" : "cuisine"}
+    - i would like to have [chinese]{"entity" : "cuisine"}
+    - i will prefer [chinese]{"entity" : "cuisine"} food
+    - i need [italian]{"entity" : "cuisine"} food
+    - i would like to eat [italian]{"entity" : "cuisine"} food
+    - i will prefer [italian]{"entity" : "cuisine"} food
+    - i would love to eat [chinese]{"entity" : "cuisine"} food
+    - i would love to eat [chinese]{"entity" : "cuisine"}
+    - i would love to eat [north indian]{"entity" : "cuisine"} food
+    - [italian]{"entity" : "cuisine"}
+    - [chinese]{"entity" : "cuisine"}
+    - [thai]{"entity" : "cuisine"}
+    - [Maharashtrian]{"entity" : "cuisine"}
+    - [BBQ]{"entity" : "cuisine"}
+    - [punjabi]{"entity" : "cuisine"}
+    - [Mangalorean]{"entity" : "cuisine"}
+    - [Moroccan]{"entity" : "cuisine"}
+    - [french]{"entity" : "cuisine"}
+    - [Indonesian]{"entity" : "cuisine"}
+    - [cuban]{"entity" : "cuisine"}
+    - [soul food]{"entity" : "cuisine"}
+    - [healthy food]{"entity" : "cuisine"}
+    - [street food]{"entity" : "cuisine"}
+    - [armenian]{"entity" : "cuisine"}
+    - [jewish]{"entity" : "cuisine"}
+    - [european]{"entity" : "cuisine"}
+    - [south indian]{"entity" : "cuisine"}
+    - i will prefer to eat [chinese]{"entity" : "cuisine"} food
+    - i would love to eat [italian]{"entity" : "cuisine"} food
+    - i will prefer [punjabi]{"entity" : "cuisine"} food
+    - i want to eat [italian]{"entity" : "cuisine"} food
+    - [chinese]{"entity" : "cuisine"} please
+    - [malvani]{"entity" : "cuisine"} please
+    - i would love to eat [pizza](cuisine:italian)
+    - i would like to eat [afghan]{"entity" : "cuisine"} meal
+    - i would like to eat [fast food]{"entity" : "cuisine"}
+    - i will eat [gujarati]{"entity" : "cuisine"} meal
+    - get me some [indian]{"entity" : "cuisine"} food
+    - get me some  [biryani]{"entity" : "cuisine"}
+    - get me some [coffee]{"entity" : "cuisine"}
+    - get me some [raw meats]{"entity" : "cuisine"}
+    - get me some  [american food]{"entity" : "cuisine"}
+    - get me some [british]{"entity" : "cuisine"} food
+    - get me some  [bbq]{"entity" : "cuisine"}
+    - get me some [mongolian]{"entity" : "cuisine"} food
+    - get me some [ice cream]{"entity" : "cuisine"}
+    - get me some [beverages]{"entity" : "cuisine"}
+    - [modern indian]{"entity" : "cuisine"}
+    - [north indian]{"entity" : "cuisine"}
+    - [Lebanese]{"entity" : "cuisine"}
+    - [Fusion]{"entity" : "cuisine"}
+    - [Coffee and Tea]{"entity" : "cuisine"}
+    - [Caribbean]{"entity" : "cuisine"}
+    - [cajuan]{"entity" : "cuisine"}
+    - [Polish]{"entity" : "cuisine"}
+    - [Indonesian]{"entity" : "cuisine"}
+    - [haraynvi]{"entity" : "cuisine"}
+    - get me some [kebab]{"entity" : "cuisine"}
+    - get me some [continental]{"entity" : "cuisine"} food
+    - i would like to eat [street food]{"entity" : "cuisine"}
+    - i would like to eat [burmese]{"entity" : "cuisine"} food
+    - i would like to eat [odia]{"entity" : "cuisine"} food
+    - i would prefer eating [bengali]{"entity" : "cuisine"} food
+    - i would like to eat [rolls]{"entity" : "cuisine"}
+    - i would like to eat [bakery]{"entity" : "cuisine"}
+    - i would like to eat [bengali]{"entity" : "cuisine"} food
+    - get me some [bengali]{"entity" : "cuisine"} food
+    - get me some [vietnamese]{"entity" : "cuisine"} food
+    - i would love to eat [momos]{"entity" : "cuisine"}
+    - get me some [korean]{"entity" : "cuisine"} food
+
+
+- lookup: cuisine
+  examples: |
+    - indian
+    - continental
+    - american
+    - chinese
+    - italian
+    - british
+    - french
+    - greek
+    - caribbean
+    - japanese
+    - Mediterranean
+    - mexican
+    - moroccan
+    - spanish
+    - thai
+    - turkish
+    - vietnamese
+    - sindhi
+    - BBQ
+    - Beverages
+    - North Indian
+    - Asian
+    - Finger Food
+    - South Indian
+    - Andhra
+    - European
+    - Desserts
+    - Salad
+    - Mughlai
+    - Biryani
+    - Fast Food
+    - Bengali
+    - Chettinad
+    - Goan
+    - Kashmiri
+    - Gujarati
+    - Juices
+    - Momos
+    - North Eastern
+    - Cafe
+    - Bar Food
+    - Tibetan
+    - Rolls
+    - Kebab
+    - Middle Eastern
+    - Seafood
+    - Awadhi
+    - Healthy Food
+    - Modern Indian
+    - Pizza
+    - Burger
+    - Grill
+    - Steak
+    - Hyderabadi
+    - shawarma
+    - Bakery
+    - Arabian
+    - Maharashtrian
+    - Tex-Mex
+    - Lucknowi
+    - Lebanese
+    - Kerala
+    - Drinks
+    - Mithai
+    - Street Food
+    - Sushi
+    - German
+    - Ice Cream
+    - Sandwich
+    - Nepalese
+    - Assamese
+    - Peruvian
+    - Rajasthani
+    - Roast Chicken
+    - Soul Food
+    - Raw Meats
+    - Frozen Yogurt
+    - Healthy Food
+    - Israeli
+    - Tamil
+    - Wraps
+    - russian
+    - Modern Indian
+    - Pav bhaaji
+    - pav bhaji
+    - Charcoal Chicken
+    - Brazilian
+    - Tea
+    - Iranian
+    - konkan
+    - Malaysian
+    - Mangalorean
+    - Mongolian
+    - odia
+    - afghan
+    - afghani
+    - malayali
+    - punjabi
+    - haryanvi
+    - malvan
+    - malvani
+    - coffee and tea
